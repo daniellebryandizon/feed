@@ -1,0 +1,34 @@
+.login-container {
+    margin-top: 5%;
+    text-align: center;
+}
+
+.login-avatar {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.login-form {
+    padding-top: 20px;
+}
+
+.login-button {
+    background-color: #ffd54f !important;
+}
+
+.login-form > h6 {
+    font-weight: 600 !important;
+    font-size: 15px;
+}
+
+.login-muted > h6{
+    color: #9e9e9e;
+    font-style: italic;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+.register-link {
+    text-decoration: none !important;
+    color: #ffd54f !important;
+}

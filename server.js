@@ -9,7 +9,7 @@ connectDB();
 const app = express(express.json());
 
 //Routes
-app.use('/', (req, res) => res.send('Initial Message'));
+
 
 //Initialize Server
 const PORT = process.env.PORT || 5000;
