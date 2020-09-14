@@ -6,7 +6,7 @@ import { Button, Avatar, Typography, Box, Paper } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import CustomTextField from './helpers/CustomTextField';
 import feed_icon from '../css/images/feed_icon.png';
-import '../css/components/login.css';
+import '../css/components/register.css';
 
 const useStyles = makeStyles((theme) => ({
     large: {
@@ -15,21 +15,23 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const Login = () => {
+
+const Register = () => {
 
     const classes = useStyles();
 
+
     return (
         <Fragment>
-            <Box className="login-container">
-                <Box className="login-form-container">
-                    <Box className="login-avatar-container">
-                        <Avatar alt="Remy Sharp" src={feed_icon} className={`login-avatar ${classes.large}`} />
+            <Box className="register-container">
+                <Box className="register-form-container">
+                    <Box className="register-avatar-container">
+                        <Avatar src={feed_icon} className={`register-avatar ${classes.large}`}></Avatar>
                         <Typography variant="h6">Feed |
-                        <span> Login</span>
+                        <span> Account Registration</span>
                         </Typography>
                     </Box>
-                    <Box className="login-form">
+                    <Box className="register-form">
                         <form onSubmit="">
                             <CustomTextField
                                 id="standard-basic"
@@ -43,21 +45,39 @@ const Login = () => {
                             <CustomTextField
                                 id="standard-basic"
                                 autoComplete="off"
+                                label="Email"
+                                type="email"
+                                name="email"
+                                className="text-field" />
+                            <br />
+                            <br />
+                            <CustomTextField
+                                id="standard-basic"
+                                autoComplete="off"
                                 label="Password"
                                 type="password"
                                 name="password"
                                 className="text-field" />
                             <br />
                             <br />
-                            <Button variant="contained" disableElevation className="login-button">
-                                <Typography variant="subtitle2" className="button-text">Login</Typography>
+                            <CustomTextField
+                                id="standard-basic"
+                                autoComplete="off"
+                                label="Confirm Password"
+                                type="password"
+                                name="confirmPassword"
+                                className="text-field" />
+                            <br />
+                            <br />
+                            <Button variant="contained" disableElevation className="register-button">
+                                <Typography variant="subtitle2" className="button-text">Register</Typography>
                             </Button>
                         </form>
                     </Box>
-                    <Box className="login-muted">
+                    <Box className="register-muted">
                         <Typography variant="subtitle1">
-                            Dont have an account? Register {` `}
-                            <Link to="/register" className="register-link">here</Link>
+                            Already have an account? Login {` `}
+                            <Link to="/" className="login-link">here</Link>
                         </Typography>
                     </Box>
                 </Box>
@@ -66,4 +86,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default Register;

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 //CSS IMPORTS
-import { AppBar, Toolbar, Typography, CssBaseline, useScrollTrigger, Container, IconButton } from '@material-ui/core';
+import { AppBar, Toolbar, Typography, CssBaseline, useScrollTrigger, Container } from '@material-ui/core';
 import feed_icon from '../css/images/feed_icon.png'
 import '../css/components/navigation.css';
 
