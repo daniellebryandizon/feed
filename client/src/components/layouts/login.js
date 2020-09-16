@@ -3,21 +3,15 @@ import { Link } from 'react-router-dom';
 
 //CSS IMPORTS
 import { Button, Avatar, Typography, Box, Paper } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
+import AvatarSize from './helpers/AvatarSizes';
 import CustomTextField from './helpers/CustomTextField';
 import feed_icon from '../css/images/feed_icon.png';
 import '../css/components/login.css';
 
-const useStyles = makeStyles((theme) => ({
-    large: {
-        width: theme.spacing(20),
-        height: theme.spacing(20),
-    },
-}));
 
 const Login = () => {
 
-    const classes = useStyles();
+    const classes = AvatarSize();
 
     return (
         <Fragment>

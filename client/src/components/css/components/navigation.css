@@ -1,8 +1,7 @@
 .application-bar {
-    background-color: #fafafa !important;
+    background-color: #ffffff !important;
     color: #424242 !important;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    box-shadow: 1px 1px 1px 1px #ccc !important;
 }
 
 .application-bar-title{

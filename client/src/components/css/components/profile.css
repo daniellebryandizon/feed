@@ -1,0 +1,127 @@
+.profile-container {
+    place-content: stretch center;
+    align-items: stretch;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+.profile-header {
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 10px;
+    min-width: 300px;
+    max-width: 700px;
+    text-align: center;
+}
+
+.profile-body {
+    margin: 0 auto;
+    border-radius: 10px;
+    min-width: 300px;
+    max-width: 700px;
+}
+
+.profile-avatar {
+    min-height: 200px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.profile-avatar div {
+    margin: 0 auto;
+}
+
+.profile-info {
+    min-height: 100px;
+    padding: 5px;
+    width: 100%;
+}
+
+.profile-info-name h6{
+    font-weight: 500 !important;
+    font-size: 30px;
+}
+
+.profile-info-lifestyle > div {
+    place-content: stretch center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.lifestyle-item {
+    margin-top: 5px;
+    margin-right: 10px;
+    border-radius: 20px;
+    font-style: italic;
+    font-size: 15px;
+    color: #757575 !important;
+}
+
+.profile-info-statistics > div {
+    place-content: stretch center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.statistics-item {
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+
+.statistics-item div:first-child p {
+    color: #ffa726 !important;
+}
+
+.header {
+    padding: 10px;
+    padding-bottom: 0px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.header button {
+    text-transform: none;
+    color: #ffa726 !important;
+    position: absolute;
+    right: 8px;
+    font-size: 15px;
+}
+
+.body {
+    padding: 10px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.body-item {
+    min-width: 162px;
+    max-width: 162px;
+    min-height: 210px;
+    max-height: 210px;
+    margin-right: 4px;
+    margin-left: 4px;
+    position: relative;
+    cursor: pointer;
+}
+
+.body-item div {
+    position: absolute;
+    padding-left: 10px;
+    top: 10px;
+}
+
+.body-item div p {
+    color: #ffffff !important;
+    font-weight: 600;
+}
+
+.body-item img {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+}

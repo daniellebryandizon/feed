@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navigation from './components/layouts/navigation';
 import Login from './components/layouts/login';
 import Register from './components/layouts/register';
+import Profile from './components/layouts/profile';
 
 //CSS IMPORTS
 import { Container } from '@material-ui/core';
@@ -17,8 +18,9 @@ const App = () => {
             <Switch>
                 <Container>
                     <Navigation />
-                    <Route exact path="/" component={Login}></Route>
+                    <Route exact path="/login" component={Login}></Route>
                     <Route exact path="/register" component={Register}></Route>
+                    <Route exact path="/" component={Profile}></Route>
                 </Container>
             </Switch>
         </Router>
