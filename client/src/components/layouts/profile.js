@@ -1,19 +1,17 @@
 import React, { Fragment } from 'react';
 
+import Card from './card';
+import CardPost from './card-post';
+
 //CSS IMPORTS
 import { Typography, Box, Avatar, Paper, Divider, Button } from '@material-ui/core';
 import AvatarSizes from './helpers/AvatarSizes';
 import AvatarPlaceholder from '../css/images/squidward.jpg'
 
 import ColoredPatties from '../css/images/colored-patties.png';
+import Fries from '../css/images/fries.jpg'
 import KrabbyPatty from '../css/images/krabby-patty.jpg';
-import Pizza from '../css/images/pizza.png';
-import Fries from '../css/images/fries.jpg';
-
-import SpongeBob from '../css/images/spongebob.jpg';
-import Krabs from '../css/images/mr-krabs.jpg';
 import Patrick from '../css/images/patrick.jpg';
-import Sandy from '../css/images/sandy.jpg';
 
 import '../css/components/profile.css';
 
@@ -24,7 +22,7 @@ const Profile = () => {
     return (
         <Fragment>
             <Box className="profile-container">
-                <Box className="profile-header">
+                <Paper className="profile-header">
                     <Box className="profile-avatar">
                         <Avatar src={AvatarPlaceholder} className={classes.profile}></Avatar>
                     </Box>
@@ -48,7 +46,7 @@ const Profile = () => {
                                         <Typography>Followers</Typography>
                                     </Box>
                                     <Box >
-                                        <Typography>100</Typography>
+                                        <Typography>0</Typography>
                                     </Box>
                                 </Box>
                                 <Box className="statistics-item">
@@ -56,85 +54,55 @@ const Profile = () => {
                                         <Typography>Recipes</Typography>
                                     </Box>
                                     <Box>
-                                        <Typography>25</Typography>
+                                        <Typography>0</Typography>
                                     </Box>
                                 </Box>
                                 <Box className="statistics-item">
                                     <Box>
-                                        <Typography>Reviews</Typography>
+                                        <Typography>Likes</Typography>
                                     </Box>
                                     <Box>
-                                        <Typography>1,000</Typography>
+                                        <Typography>0</Typography>
                                     </Box>
                                 </Box>
                             </Box>
                         </Box>
+                        <Box className="profile-follow">
+                            <Button className="profile-follow-button">Follow</Button>
+                        </Box>
                     </Box>
-                    <Divider></Divider>
-                </Box>
+                </Paper>
                 <Box className="profile-body">
-                    <Box className="followers-containers">
+                    <Box>
                         <Box className="header">
-                            <Typography variant="h6">Followers</Typography>
+                            <Typography variant="h6">Following</Typography>
                             <Button>See All</Button>
                         </Box>
                         <Box className="body">
-                            <Paper elevation={3} className="body-item">
-                                <img src={SpongeBob}></img>
-                                <Box>
-                                    <Typography>SpongeBob SquarePants</Typography>
-                                </Box>
-                            </Paper>
-                            <Paper elevation={3} className="body-item">
-                                <img src={Patrick}></img>
-                                <Box>
-                                    <Typography>Patrick Star</Typography>
-                                </Box>
-                            </Paper>
-                            <Paper elevation={3} className="body-item">
-                                <img src={Sandy}></img>
-                                <Box>
-                                    <Typography>Sandy Cheeks</Typography>
-                                </Box>
-                            </Paper>
-                            <Paper elevation={3} className="body-item">
-                                <img src={Krabs}></img>
-                                <Box>
-                                    <Typography>Mr. Krabs</Typography>
-                                </Box>
-                            </Paper>
+                            <Card img={Patrick} title="Patrick Star" />
+                            <Card img={Patrick} title="Patrick Star" />
+                            <Card img={Patrick} title="Patrick Star" />
+                            <Card img={Patrick} title="Patrick Star" />
                         </Box>
                     </Box>
-                    <Box className="followers-containers">
+                    <Box>
                         <Box className="header">
-                            <Typography variant="h6">Recipes</Typography>
+                            <Typography variant="h6">Top Recipes</Typography>
                             <Button>See All</Button>
                         </Box>
                         <Box className="body">
-                            <Paper elevation={3} className="body-item">
-                                <img src={ColoredPatties}></img>
-                                <Box>
-                                    <Typography>Colored Patties</Typography>
-                                </Box>
-                            </Paper>
-                            <Paper elevation={3} className="body-item">
-                                <img src={Fries}></img>
-                                <Box>
-                                    <Typography>Fries</Typography>
-                                </Box>
-                            </Paper>
-                            <Paper elevation={3} className="body-item">
-                                <img src={KrabbyPatty}></img>
-                                <Box>
-                                    <Typography>Krabby Patty</Typography>
-                                </Box>
-                            </Paper>
-                            <Paper elevation={3} className="body-item">
-                                <img src={Pizza}></img>
-                                <Box>
-                                    <Typography>Krabby Pizza</Typography>
-                                </Box>
-                            </Paper>
+                            <Card img={ColoredPatties} title="Colored Patties" />
+                            <Card img={ColoredPatties} title="Colored Patties" />
+                            <Card img={ColoredPatties} title="Colored Patties" />
+                            <Card img={ColoredPatties} title="Colored Patties" />
+                        </Box>
+                    </Box>
+                    <Box>
+                        <Box className="header">
+                            <Typography variant="h6">Recent Feed</Typography>
+                        </Box>
+                        <Box className="body">
+                            <CardPost img={ColoredPatties}/>
                         </Box>
                     </Box>
                 </Box>

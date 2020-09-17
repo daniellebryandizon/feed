@@ -1,0 +1,35 @@
+.card-item {
+    min-width: 162px;
+    max-width: 162px;
+    min-height: 210px;
+    max-height: 210px;
+    margin-right: 4px;
+    margin-left: 4px;
+    position: relative;
+    cursor: pointer;
+}
+
+.card-item div {
+    position: absolute;
+    padding-left: 10px;
+    top: 10px;
+}
+
+.card-item div p {
+    color: #ffffff !important;
+    font-weight: 600;
+}
+
+.card-item-icon {
+    color: #ffa726 !important;
+    position: absolute;
+    right: 10px !important;
+    top: 180px !important;
+}
+
+.card-item img {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+}
