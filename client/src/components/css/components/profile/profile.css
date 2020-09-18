@@ -74,35 +74,12 @@
     width: 100px;
 }
 
-.profile-body {
-    margin: 0 auto;
-    margin-top: 10px;
-    border-radius: 10px;
-    min-width: 300px;
-    max-width: 700px;
-}
-
-.header {
-    padding: 5px;
-    display: flex;
-    position: relative;
-    overflow: hidden;
-}
-
-.header button {
-    text-transform: none;
-    color: #ffa726 !important;
-    position: absolute;
-    right: 8px;
-    font-size: 15px;
-}
-
 .profile-menu {
     margin-top: 10px;
 }
 
 .profile-menu > div div {
-    width: 33%;
+    width: 25%;
 }
 
 .profile-menu > div button {

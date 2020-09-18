@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react';
 
 import ProfileHome from './profile-home';
+import ProfileRecipes from './profile-recipes';
+import ProfileFollowing from './profile-following';
 
 //CSS IMPORTS
 import { Typography, Box, Avatar, Paper, Divider, Button } from '@material-ui/core';
@@ -69,8 +71,11 @@ const Profile = () => {
                                 <Box className="">
                                     <Button>Home</Button>
                                 </Box>
-                                <Box className="profile-current-tab">
+                                <Box className="">
                                     <Button>Recipes</Button>
+                                </Box>
+                                <Box className="profile-current-tab">
+                                    <Button>Following</Button>
                                 </Box>
                                 <Box className="">
                                     <Button>About</Button>
@@ -83,21 +88,19 @@ const Profile = () => {
                     /*
                         <ProfileHome />
                     */
-                    <ProfileHome />
                 }
                 {
                     /*
                         <ProfileHome />
                     */
-
+                    
                 }
                 {
                     /*
                         <ProfileHome />
                     */
-
+                    <ProfileFollowing />
                 }
-
             </Box>
         </Fragment >
     )
