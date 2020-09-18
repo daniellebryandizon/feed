@@ -5,8 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navigation from './components/layouts/navigation';
 import Login from './components/layouts/login';
 import Register from './components/layouts/register';
-import Profile from './components/layouts/profile';
-import Card from './components/layouts/card';
+import Profile from './components/layouts/profile/profile';
 
 //CSS IMPORTS
 import { Container } from '@material-ui/core';

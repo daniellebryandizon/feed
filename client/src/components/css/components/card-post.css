@@ -1,17 +1,23 @@
 .card-post {
     width: 100%;
+    margin-bottom: 10px;
 }
 
 .card-post-header {
     padding: 10px;
-    padding-top: 10px;
+    padding-top: 12px;
     padding-bottom: 5px;
     display: flex;
     flex-wrap: wrap;
 }
 
-.card-post-header > * {
+.card-post-header > *, .card-post-footer > * , .card-post-comments > *{
     margin-right: 10px;
+    margin-left: 5px;
+}
+
+.card-post-header div p:first-child {
+    font-weight: 500;
 }
 
 .card-post-header div:nth-child(n + 1) p:nth-child(n + 2) {
@@ -25,13 +31,46 @@
     object-fit: cover;
 }
 
-.card-post-footer {
+.card-post-mid {
     display: flex;
     flex-wrap: wrap;
 }
 
 .card-post-like, .card-post-review, .card-post-share {
-    width: 33%;
+    width: 50%;
     text-align: center;
     padding: 5px;
+    font-weight: 500;
+}
+
+.card-post-footer {
+    padding: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    display: flex;
+}
+
+.card-post-footer > div:nth-child(n+2){
+    width: 90%;
+}
+
+.card-post-footer > div:nth-child(n+2) > div {
+    width: 100%;
+}
+
+.card-post-comments {
+    padding: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    display: flex;
+}
+
+.card-post-comments > div:nth-child(n+2){
+    background-color: #eeeeee;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.card-post-comments > div:nth-child(n+2) > div {
+    width: 100%;
 }

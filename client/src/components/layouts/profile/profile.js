@@ -1,19 +1,13 @@
 import React, { Fragment } from 'react';
 
-import Card from './card';
-import CardPost from './card-post';
+import ProfileHome from './profile-home';
 
 //CSS IMPORTS
 import { Typography, Box, Avatar, Paper, Divider, Button } from '@material-ui/core';
-import AvatarSizes from './helpers/AvatarSizes';
-import AvatarPlaceholder from '../css/images/squidward.jpg'
+import AvatarSizes from '../helpers/AvatarSizes';
+import AvatarPlaceholder from '../../css/images/squidward.jpg'
 
-import ColoredPatties from '../css/images/colored-patties.png';
-import Fries from '../css/images/fries.jpg'
-import KrabbyPatty from '../css/images/krabby-patty.jpg';
-import Patrick from '../css/images/patrick.jpg';
-
-import '../css/components/profile.css';
+import '../../css/components/profile/profile.css';
 
 const Profile = () => {
 
@@ -43,7 +37,7 @@ const Profile = () => {
                             <Box>
                                 <Box className="statistics-item">
                                     <Box>
-                                        <Typography>Followers</Typography>
+                                        <Typography>Recipes</Typography>
                                     </Box>
                                     <Box >
                                         <Typography>0</Typography>
@@ -51,7 +45,7 @@ const Profile = () => {
                                 </Box>
                                 <Box className="statistics-item">
                                     <Box>
-                                        <Typography>Recipes</Typography>
+                                        <Typography>Followers</Typography>
                                     </Box>
                                     <Box>
                                         <Typography>0</Typography>
@@ -70,42 +64,40 @@ const Profile = () => {
                         <Box className="profile-follow">
                             <Button className="profile-follow-button">Follow</Button>
                         </Box>
+                        <Box className="profile-menu">
+                            <Box>
+                                <Box className="">
+                                    <Button>Home</Button>
+                                </Box>
+                                <Box className="profile-current-tab">
+                                    <Button>Recipes</Button>
+                                </Box>
+                                <Box className="">
+                                    <Button>About</Button>
+                                </Box>
+                            </Box>
+                        </Box>
                     </Box>
                 </Paper>
-                <Box className="profile-body">
-                    <Box>
-                        <Box className="header">
-                            <Typography variant="h6">Following</Typography>
-                            <Button>See All</Button>
-                        </Box>
-                        <Box className="body">
-                            <Card img={Patrick} title="Patrick Star" />
-                            <Card img={Patrick} title="Patrick Star" />
-                            <Card img={Patrick} title="Patrick Star" />
-                            <Card img={Patrick} title="Patrick Star" />
-                        </Box>
-                    </Box>
-                    <Box>
-                        <Box className="header">
-                            <Typography variant="h6">Top Recipes</Typography>
-                            <Button>See All</Button>
-                        </Box>
-                        <Box className="body">
-                            <Card img={ColoredPatties} title="Colored Patties" />
-                            <Card img={ColoredPatties} title="Colored Patties" />
-                            <Card img={ColoredPatties} title="Colored Patties" />
-                            <Card img={ColoredPatties} title="Colored Patties" />
-                        </Box>
-                    </Box>
-                    <Box>
-                        <Box className="header">
-                            <Typography variant="h6">Recent Feed</Typography>
-                        </Box>
-                        <Box className="body">
-                            <CardPost img={ColoredPatties}/>
-                        </Box>
-                    </Box>
-                </Box>
+                {
+                    /*
+                        <ProfileHome />
+                    */
+                    <ProfileHome />
+                }
+                {
+                    /*
+                        <ProfileHome />
+                    */
+
+                }
+                {
+                    /*
+                        <ProfileHome />
+                    */
+
+                }
+
             </Box>
         </Fragment >
     )
