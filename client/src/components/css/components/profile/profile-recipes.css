@@ -19,3 +19,21 @@
     position: relative;
     overflow: hidden;
 }
+
+.recipe-add-item {
+    min-width: 162px;
+    max-width: 162px;
+    min-height: 210px;
+    max-height: 210px;
+    margin-top: 10px;
+    margin-right: 4px;
+    margin-left: 4px;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    
+}
+
+.recipe-add-item p {
+    font-weight: 500;
+}

@@ -1,8 +1,9 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 
 import ProfileHome from './profile-home';
 import ProfileRecipes from './profile-recipes';
 import ProfileFollowing from './profile-following';
+import ProfileAbout from './profile-about';
 
 //CSS IMPORTS
 import { Typography, Box, Avatar, Paper, Divider, Button } from '@material-ui/core';
@@ -13,7 +14,16 @@ import '../../css/components/profile/profile.css';
 
 const Profile = () => {
 
+    const [tab, setTab] = useState({
+        isHome: true,
+        isRecipes: false,
+        isFollowing: false,
+        isAbout: false
+    });
+
     const classes = AvatarSizes();
+
+    const { isHome, isRecipes, isFollowing, isAbout } = tab;
 
     return (
         <Fragment>
@@ -68,16 +78,48 @@ const Profile = () => {
                         </Box>
                         <Box className="profile-menu">
                             <Box>
-                                <Box className="">
+                                <Box className={isHome ? 'profile-current-tab' : ''} onClick={
+                                    () => {
+                                        setTab({
+                                            isHome: true,
+                                            isRecipes: false,
+                                            isFollowing: false,
+                                            isAbout: false
+                                        })
+                                    }}>
                                     <Button>Home</Button>
                                 </Box>
-                                <Box className="">
+                                <Box className={isRecipes ? 'profile-current-tab' : ''} onClick={
+                                    () => {
+                                        setTab({
+                                            isHome: false,
+                                            isRecipes: true,
+                                            isFollowing: false,
+                                            isAbout: false
+                                        })
+                                    }}>
                                     <Button>Recipes</Button>
                                 </Box>
-                                <Box className="profile-current-tab">
+                                <Box className={isFollowing ? 'profile-current-tab' : ''} onClick={
+                                    () => {
+                                        setTab({
+                                            isHome: false,
+                                            isRecipes: false,
+                                            isFollowing: true,
+                                            isAbout: false
+                                        })
+                                    }}>
                                     <Button>Following</Button>
                                 </Box>
-                                <Box className="">
+                                <Box className={isAbout ? 'profile-current-tab' : ''} onClick={
+                                    () => {
+                                        setTab({
+                                            isHome: false,
+                                            isRecipes: false,
+                                            isFollowing: false,
+                                            isAbout: true
+                                        })
+                                    }}>
                                     <Button>About</Button>
                                 </Box>
                             </Box>
@@ -85,21 +127,16 @@ const Profile = () => {
                     </Box>
                 </Paper>
                 {
-                    /*
-                        <ProfileHome />
-                    */
+                    isHome ? (<ProfileHome />) : ''
                 }
                 {
-                    /*
-                        <ProfileHome />
-                    */
-                    
+                    isRecipes ? (<ProfileRecipes />) : ''
                 }
                 {
-                    /*
-                        <ProfileHome />
-                    */
-                    <ProfileFollowing />
+                    isFollowing ? (<ProfileFollowing />) : ''
+                }
+                {
+                    isAbout ? (<ProfileAbout />) : ''
                 }
             </Box>
         </Fragment >

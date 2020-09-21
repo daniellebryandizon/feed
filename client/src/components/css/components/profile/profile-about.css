@@ -1,0 +1,11 @@
+.profile-about {
+    margin: 0 auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    min-width: 300px;
+    max-width: 700px;
+}
+
+.profile-about-header {
+    padding: 5px;
+}
