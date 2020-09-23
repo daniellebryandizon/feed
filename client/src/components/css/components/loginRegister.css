@@ -1,0 +1,45 @@
+.login-register-container {
+    margin-top: 2%;
+    place-content: stretch center;
+    align-items: stretch;
+    flex-direction: row;
+    box-sizing: border-box;
+    display:flex;
+}
+
+.log-reg-form-container {
+    text-align: center;
+}
+
+.login-reg-avatar {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.log-reg-form {
+    width: 400px;
+    margin-top: 10px;
+}
+
+.login-reg-tabs {
+    display: flex;
+    text-align: center;
+}
+
+.login-reg-tabs div {
+    min-width: 50%;
+}
+
+.login-reg-tabs div button{
+    text-transform: none;
+    width: 100%;
+    padding: 10px;
+}
+
+.login-reg-current-tab {
+    border-bottom: 3px solid #ffa726 !important;
+}
+
+.login-reg-other-tab {
+    border-bottom: 1px solid #e0e0e0 !important;
+}

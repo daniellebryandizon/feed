@@ -1,52 +1,9 @@
-.login-container {
-    margin-top: 5%;
-    place-content: stretch center;
-    align-items: stretch;
-    flex-direction: row;
-    box-sizing: border-box;
-    display: flex;
-}
-
-.login-form-container{
-    min-width: 350px !important;
-    padding-right: 40px;
-    padding-left: 40px;
-    padding-bottom: 40px;
-    text-align: center;
-}
-
-.login-avatar-container span {
-    font-style: italic;
-    color:  #ffa726 !important;
-}
-
-.login-avatar {
-    margin: 0 auto;
-    width: 80%;
-}
-
 .login-form {
-    padding-top: 20px;
+    padding: 20px;
     text-align: center;
 }
 
 .login-button {
     background-color: #ffa726 !important;
-}
-
-.login-form > h6 {
-    font-weight: 600 !important;
-    font-size: 15px;
-}
-
-.login-muted > h6{
-    color: #9e9e9e;
-    font-style: italic;
-    font-size: 13px;
-    margin-top: 13px;
-}
-
-.register-link {
-    text-decoration: none !important;
-    color: #ffa726 !important;
+    width: 100px;
 }

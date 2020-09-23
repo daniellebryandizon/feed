@@ -20,7 +20,7 @@ const Navigation = (props) => {
                             </Link>
                             <Typography className="application-bar-title">
                                 <Link to="/" className="application-bar-link">
-                                    Feed
+                                    <span className="logo-accent">|</span> Feed
                                 </Link>
                             </Typography>
                             <Link to="/" className="application-bar-link">

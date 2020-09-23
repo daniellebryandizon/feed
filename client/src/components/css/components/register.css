@@ -1,49 +1,9 @@
-.register-container {
-    margin-top: 1%;
-    place-content: stretch center;
-    align-items: stretch;
-    flex-direction: row;
-    box-sizing: border-box;
-    display: flex;
-}
-
-.register-form-container{
-    min-width: 350px !important;
-    padding-right: 40px;
-    padding-left: 40px;
-    padding-bottom: 40px;
-    text-align: center;
-}
-
-.register-avatar-container span {
-    font-style: italic;
-    color:  #ffa726 !important;
-}
-
-.register-avatar {
-    margin: 0 auto;
-    width: 80%;
-}
-
 .register-form {
-    padding-top: 20px;
+    padding: 20px;
     text-align: center;
 }
 
 .register-button {
     background-color:#ffa726 !important;
+    width: 100px;
 }
-
-.register-muted > h6{
-    color: #9e9e9e;
-    font-style: italic;
-    font-size: 13px;
-    margin-top: 13px;
-}
-
-.login-link {
-    text-decoration: none !important;
-    color: #ffa726 !important;
-}
-
-
