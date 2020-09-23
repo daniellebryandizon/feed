@@ -9,7 +9,7 @@ const connectDB = () => {
                 useUnifiedTopology: true,
                 useCreateIndex: true,
             })
-            .then(() => console.log('MongoDB has started.'))
+            .then(() => console.log('MongoDB has started'))
 
     } catch (error) {
         console.log(error.message);
