@@ -13,6 +13,7 @@
 .card-item div {
     position: absolute;
     padding-left: 10px;
+    padding-right: 10px;
     top: 10px;
 }
 
@@ -22,9 +23,9 @@
 }
 
 .card-item-icon {
-    color: #ffa726 !important;
+    color: red !important;
     position: absolute;
-    right: 10px !important;
+    right: 0px !important;
     top: 180px !important;
 }
 

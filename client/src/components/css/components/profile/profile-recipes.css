@@ -6,18 +6,18 @@
     max-width: 700px;
 }
 
-.profile-recipes-body {
-    padding: 10px;
-    padding-top: 0px;
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .profile-recipes-header {
     padding: 5px;
     display: flex;
     position: relative;
     overflow: hidden;
+}
+
+.profile-recipes-body {
+    padding: 10px;
+    padding-top: 0px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .recipe-add-item {
@@ -29,7 +29,6 @@
     margin-right: 4px;
     margin-left: 4px;
     position: relative;
-    cursor: pointer;
     text-align: center;
     
 }

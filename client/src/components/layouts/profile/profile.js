@@ -6,7 +6,7 @@ import ProfileFollowing from './profile-following';
 import ProfileAbout from './profile-about';
 
 //CSS IMPORTS
-import { Typography, Box, Avatar, Paper, Divider, Button } from '@material-ui/core';
+import { Typography, Box, Avatar, Paper, Button } from '@material-ui/core';
 import AvatarSizes from '../helpers/AvatarSizes';
 import AvatarPlaceholder from '../../css/images/squidward.jpg'
 
@@ -15,8 +15,8 @@ import '../../css/components/profile/profile.css';
 const Profile = () => {
 
     const [tab, setTab] = useState({
-        isHome: true,
-        isRecipes: false,
+        isHome: false,
+        isRecipes: true,
         isFollowing: false,
         isAbout: false
     });
@@ -38,11 +38,11 @@ const Profile = () => {
                         </Box>
                         <Box className="profile-info-lifestyle">
                             <Box>
-                                <Box className="lifestyle-item">Fun</Box>
-                                <Box className="lifestyle-item">Healthy</Box>
-                                <Box className="lifestyle-item">Energetic</Box>
-                                <Box className="lifestyle-item">Organic</Box>
-                                <Box className="lifestyle-item">Inspiration</Box>
+                                <Box className="lifestyle-item"><span className="logo-accent">|</span> Fun</Box>
+                                <Box className="lifestyle-item"><span className="logo-accent">|</span> Healthy</Box>
+                                <Box className="lifestyle-item"><span className="logo-accent">|</span> Energetic</Box>
+                                <Box className="lifestyle-item"><span className="logo-accent">|</span> Organic</Box>
+                                <Box className="lifestyle-item"><span className="logo-accent">|</span> Inspiration</Box>
                             </Box>
                         </Box>
                         <Box className="profile-info-statistics">

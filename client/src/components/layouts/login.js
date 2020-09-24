@@ -1,17 +1,12 @@
 import React, { Fragment } from 'react';
-import { Link } from 'react-router-dom';
 
 //CSS IMPORTS
-import { Button, Avatar, Typography, Box, Paper } from '@material-ui/core';
-import AvatarSize from './helpers/AvatarSizes';
+import { Button, Typography, Box } from '@material-ui/core';
 import CustomTextField from './helpers/CustomTextField';
-import feed_icon from '../css/images/feed_icon.png';
+
 import '../css/components/login.css';
 
-
 const Login = () => {
-
-    const classes = AvatarSize();
 
     return (
         <Fragment>

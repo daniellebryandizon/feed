@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 
 //CSS IMPORTS
-import { Paper, Typography, Box, Avatar, Divider, TextField } from '@material-ui/core';
+import { Paper, Typography, Box, Avatar, Divider } from '@material-ui/core';
 import AvatarSizes from './helpers/AvatarSizes';
 import CustomTextField from './helpers/CustomTextField';
 

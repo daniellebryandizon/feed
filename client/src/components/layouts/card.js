@@ -2,7 +2,6 @@ import React, { Fragment } from 'react';
 
 import { Typography, Paper, Box } from '@material-ui/core';
 import FavoriteIcon from '@material-ui/icons/Favorite';
-import PersonIcon from '@material-ui/icons/Person';
 
 import '../css/components/card.css';
 
