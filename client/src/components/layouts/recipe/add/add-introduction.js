@@ -1,12 +1,11 @@
-//CSS IMPORTS
-import { Box, Button, Paper, TextareaAutosize, Typography } from '@material-ui/core';
-import PropTypes from 'prop-types';
 import React from 'react';
-import '../../../css/components/recipe/add/add-introduction.css';
+import PropTypes from 'prop-types';
+
 import CustomTextField from '../../helpers/CustomTextField';
 
-
-
+//CSS IMPORTS
+import { Box, Button, Paper, TextareaAutosize, Typography } from '@material-ui/core';
+import '../../../css/components/recipe/add/add-introduction.css';
 
 const AddIntroduction = (
     { recipe: {

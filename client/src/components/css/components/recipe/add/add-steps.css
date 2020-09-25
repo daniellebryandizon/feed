@@ -1,0 +1,10 @@
+.add-step-control {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.add-step-control p {
+    padding-left: 10px;
+    font-size: 16px !important;
+}

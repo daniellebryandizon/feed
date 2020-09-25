@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import AddIntroduction from './add-introduction';
 import AddIngredients from './add-ingredients';
+import AddSteps from './add-steps';
 
 //CSS IMPORTS
 import { Box, Typography, Button, Paper, Tooltip, Fab } from '@material-ui/core';
@@ -37,7 +38,7 @@ const AddRecipe = ({ cancelRecipe }) => {
         prepTime,
         steps,
         ingredients,
-        } = recipe;
+    } = recipe;
 
     const { introMenu, ingredientsMenu, stepsMenu } = menu;
 
@@ -138,7 +139,7 @@ const AddRecipe = ({ cancelRecipe }) => {
                             : ingredientsMenu ?
                                 (<AddIngredients ingredients={ingredients} saveIngredients={saveIngredients} />)
                                 :
-                                ('Steps List!')
+                                (<AddSteps />)
                     }
                 </Box>
             </Paper>
