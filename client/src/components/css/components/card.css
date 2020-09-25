@@ -1,6 +1,6 @@
 .card-item {
-    min-width: 162px;
-    max-width: 162px;
+    min-width: 155px;
+    max-width: 155px;
     min-height: 210px;
     max-height: 210px;
     margin-top: 10px;
@@ -23,7 +23,7 @@
 }
 
 .card-item-icon {
-    color: red !important;
+    color: #f57c00 !important;
     position: absolute;
     right: 0px !important;
     top: 180px !important;

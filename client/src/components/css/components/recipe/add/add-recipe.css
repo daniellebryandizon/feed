@@ -1,0 +1,51 @@
+.add-recipe-save {
+    margin-top: 20px;
+    display: flex;
+}
+
+.add-recipe-save div{
+    width: 50%;
+    text-align: center;
+}
+
+.add-recipe-save div button {
+    margin: 0 auto;
+    width: 60%;
+    text-transform: none !important;
+}
+
+.add-recipe-save div:first-child button {
+    background-color: #f57c00!important;
+}
+
+.add-recipe-cancel { 
+    background-color:#e0e0e0!important;
+}
+
+
+.add-recipe-menu {
+    margin-top: 20px;
+    display: flex;
+}
+
+.add-recipe-menu div {
+    width: 33.33%;
+    text-align: center;
+}
+
+.add-recipe-menu div button {
+    text-transform: none;
+    width: 100%;
+}
+
+.add-recipe-tab {
+    border-bottom: 1px solid #e0e0e0 !important;
+}
+
+.add-recipe-current-tab {
+    border-bottom: 3px solid #f57c00!important;
+}
+
+.add-recipe-body {
+    padding: 30px;
+}

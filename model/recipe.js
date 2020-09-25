@@ -18,6 +18,10 @@ const RecipeSchema = mongoose.Schema({
         contentType: String,
         required: true
     },
+    catagory: {
+        type: String,
+        required: true
+    },
     ingredients: [
         {
             quantity: {

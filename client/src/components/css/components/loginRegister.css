@@ -11,6 +11,10 @@
     text-align: center;
 }
 
+.login-reg-avatar-container h6 {
+    font-size: 30px !important;
+}
+
 .login-reg-avatar {
     margin: 0 auto;
     width: 80%;
@@ -37,7 +41,7 @@
 }
 
 .login-reg-current-tab {
-    border-bottom: 3px solid #ffa726 !important;
+    border-bottom: 3px solid #f57c00!important;
 }
 
 .login-reg-other-tab {

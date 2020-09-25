@@ -12,13 +12,15 @@ import {
 } from '@material-ui/core';
 
 const AddedIngredientsList = ({ ingredientList }) => {
+
+    console.log(Object.keys(ingredientList).length)
     return (
         <Fragment>
             <TableContainer>
                 <Table aria-label="simple table">
                     <TableHead>
                         <TableRow>
-                            <TableCell>Qty</TableCell>
+                            <TableCell>Quantity</TableCell>
                             <TableCell>Name</TableCell>
                             <TableCell>Unit</TableCell>
                             <TableCell>Notes</TableCell>
@@ -26,7 +28,7 @@ const AddedIngredientsList = ({ ingredientList }) => {
                     </TableHead>
                     <TableBody>
                         {
-                            ingredientList.lenght > 0 ?
+                            Object.keys(ingredientList).length > 0 ?
                                 ingredientList.map((ingredient) => (
                                     <TableRow>
                                         <TableCell>{ingredient.quantity}</TableCell>
@@ -37,7 +39,7 @@ const AddedIngredientsList = ({ ingredientList }) => {
                                 ))
                                 :
                                 (
-                                    <Box style={{padding: '20px'}}>
+                                    <Box style={{ padding: '20px' }}>
                                         {`No ingredients added`}
                                     </Box>
                                 )
@@ -51,7 +53,7 @@ const AddedIngredientsList = ({ ingredientList }) => {
 }
 
 AddedIngredientsList.propTypes = {
-    ingredientList: PropTypes.array.isRequired
+    ingredientList: PropTypes.arrayOf(Object).isRequired
 }
 
 export default AddedIngredientsList;

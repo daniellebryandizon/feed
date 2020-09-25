@@ -1,6 +1,6 @@
 .application-bar {
     background-color: #ffffff !important;
-    color: #424242 !important;
+    color: #f57c00 !important;
     box-shadow: 1px 1px 1px 1px #ccc !important;
 }
 
@@ -11,7 +11,7 @@
 .application-bar-link {
     font-size: 15px;
     text-decoration: none !important;
-    color: #424242 !important;
+    color: #f57c00 !important;
 }
 
 .application-bar-avatar {

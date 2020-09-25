@@ -13,6 +13,12 @@
     overflow: hidden;
 }
 
+.profile-recipes-header button {
+    margin-left: 10px;
+    text-transform: none;
+    background-color:  #f57c00;
+}
+
 .profile-recipes-body {
     padding: 10px;
     padding-top: 0px;

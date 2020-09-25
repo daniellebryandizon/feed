@@ -1,0 +1,83 @@
+.add-ingredient-container {
+    margin-top: -20px !important;
+}
+
+.add-single-ingredient-header h6:first-child{
+    padding-bottom: 5px;
+}
+
+.add-ingredient-container h6{
+    font-size: 16px !important;
+}
+
+.add-ingredient-control {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.add-ingredient-control p {
+    padding-left: 10px;
+    font-size: 16px !important;
+}
+
+.add-single-quantity-unit {
+    display: flex
+}
+
+.add-single-ingredient {
+    margin-top: 20px;
+}
+
+.add-single-quantity-unit {
+    margin-top: 20px;
+}
+
+.add-single-quantity-unit > div {
+    width: 50%;
+}
+
+.add-single-quantity-unit > div:first-child {
+    padding-right: 10px;
+}
+
+.add-single-ingredient > form > div:nth-child(n+2) {
+    margin-top: 20px;
+}
+
+.add-single-quantity-unit .text-field {
+    width: 100% !important;
+}
+
+.add-ingredient-text-area {
+    margin-top: 15px;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 98px;
+    max-height: 98px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: inherit;
+    border-radius: 5px;
+    background-color: inherit;
+    color: inherit;
+}
+
+.add-single-ingredient-controls {
+    display: flex;
+}
+
+.add-single-ingredient-controls button {
+    text-transform: none;
+    width: 15%;
+    margin-right: 10px;
+}
+
+.add-single-ingredient-controls button:first-child {
+    background-color: #f57c00!important;
+}
+
+.add-single-ingredient-controls button:last-child {
+    background-color: #e0e0e0!important;
+}
+

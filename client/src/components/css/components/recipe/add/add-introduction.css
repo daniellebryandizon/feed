@@ -1,0 +1,54 @@
+.add-introduction-container h6 {
+    font-size: 16px !important;
+}
+
+.image-upload-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.image-upload-header {
+    display: flex;
+}
+
+.image-upload-header label{
+    margin-top: -5px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    text-transform: none;
+    background-color: #f57c00!important;
+}
+
+.image-upload-body {
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 95%;
+    height: 400px;
+}
+
+.image-upload-body img {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.add-introduction-container .text-field {
+    margin-top: 0px !important;
+    margin-bottom: 20px;
+}
+
+.add-introduction-text-area {
+    margin-top: 15px;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 98px;
+    max-height: 98px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: inherit;
+    border-radius: 5px;
+    background-color: inherit;
+    color: inherit;
+}

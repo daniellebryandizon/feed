@@ -126,18 +126,20 @@ const Profile = () => {
                         </Box>
                     </Box>
                 </Paper>
-                {
-                    isHome ? (<ProfileHome />) : ''
-                }
-                {
-                    isRecipes ? (<ProfileRecipes />) : ''
-                }
-                {
-                    isFollowing ? (<ProfileFollowing />) : ''
-                }
-                {
-                    isAbout ? (<ProfileAbout />) : ''
-                }
+                <Box className="profile-body">
+                    {
+                        isHome ? (<ProfileHome />) : ''
+                    }
+                    {
+                        isRecipes ? (<ProfileRecipes />) : ''
+                    }
+                    {
+                        isFollowing ? (<ProfileFollowing />) : ''
+                    }
+                    {
+                        isAbout ? (<ProfileAbout />) : ''
+                    }
+                </Box>
             </Box>
         </Fragment >
     )

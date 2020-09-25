@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
 import Card from '../card';
-import AddRecipe from '../recipe/add-recipe';
+import AddRecipe from '../recipe/add/add-recipe';
 
-import { Typography, Box, Tooltip, Fab, Divider } from '@material-ui/core';
+import { Typography, Box, Tooltip, Fab, Divider, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import AddIcon from '@material-ui/icons/Add';
 
@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
         height: '80px',
         marginTop: '45px',
         marginBottom: '15px',
-        backgroundColor: '#ffa726 !important'
+        backgroundColor: '#f57c00!important'
     }
 }));
 
@@ -35,6 +35,14 @@ const ProfileRecipes = () => {
     })
 
     const { isHome, isAdd, isView } = recipe;
+
+    const cancelRecipe = () => {
+        setRecipe({
+            isHome: true,
+            isAdd: false,
+            isView: false
+        })
+    }
 
     const classes = useStyles();
 
@@ -71,7 +79,7 @@ const ProfileRecipes = () => {
                                 <Card img={curry} title="Curry" />
                             </Box>
                         ) :
-                        (<AddRecipe />)
+                        (<AddRecipe cancelRecipe={cancelRecipe}/>)
                 }
             </Box>
         </Box>

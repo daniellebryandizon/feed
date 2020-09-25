@@ -3,11 +3,11 @@
     align-items: stretch;
     flex-direction: row;
     box-sizing: border-box;
+    margin-bottom: 20px;
 }
 
 .profile-header {
     margin: 0 auto;
-
     border-radius: 10px;
     min-width: 300px;
     max-width: 700px;
@@ -26,7 +26,6 @@
 
 .profile-info {
     min-height: 100px;
-    padding: 5px;
     padding-bottom: 0px;
     width: 100%;
 }
@@ -65,13 +64,14 @@
 }
 
 .statistics-item div:first-child p {
-    color: #ffa726 !important;
+    color: #f57c00!important;
 }
 
 .profile-follow-button {
-    text-transform: none;
-    background-color: #ffa726 !important;
+    text-transform: none !important;
+    background-color: #f57c00!important;
     width: 100px;
+
 }
 
 .profile-menu {
@@ -88,7 +88,12 @@
 }
 
 .profile-current-tab {
-    border-bottom: 3px solid #ffa726 !important;
+    border-bottom: 3px solid #f57c00!important;
+}
+
+.profile-body > div:first-child {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 
