@@ -94,6 +94,7 @@
 .profile-body > div:first-child {
     padding-left: 10px;
     padding-right: 10px;
+    min-height: 1000px;
 }
 
 

@@ -20,12 +20,11 @@ const AddRecipe = ({ cancelRecipe }) => {
         prepTime: '',
         ingredients: [],
         steps: [],
-        addIngredient: false
     })
 
     const [menu, setMenu] = useState({
-        introMenu: false,
-        ingredientsMenu: true,
+        introMenu: true,
+        ingredientsMenu: false,
         stepsMenu: false
     })
 
@@ -38,7 +37,7 @@ const AddRecipe = ({ cancelRecipe }) => {
         prepTime,
         steps,
         ingredients,
-        addIngredient } = recipe;
+        } = recipe;
 
     const { introMenu, ingredientsMenu, stepsMenu } = menu;
 
@@ -62,21 +61,24 @@ const AddRecipe = ({ cancelRecipe }) => {
         })
     }
 
-    const saveIngredients = (ingredients) => {
-        console.log('Ratcheeed!');
-        console.log(ingredients);
-
+    const saveIngredients = (ingredient) => {
         setRecipe({
             ...recipe,
             ingredients: [
                 ...recipe.ingredients,
-                ingredients
+                ingredient
             ]
         })
     }
 
-    const saveSteps = (steps) => {
-
+    const saveSteps = (step) => {
+        setRecipe({
+            ...recipe,
+            steps: [
+                ...recipe.steps,
+                step
+            ]
+        })
     }
 
     return (
@@ -88,8 +90,9 @@ const AddRecipe = ({ cancelRecipe }) => {
                 <Box>
                     <Button
                         className="add-recipe-cancel"
-                        onClick={cancelRecipe}
-                    >Cancel</Button>
+                        onClick={cancelRecipe}>
+                        Cancel
+                    </Button>
                 </Box>
             </Box>
             <Paper>
@@ -133,7 +136,7 @@ const AddRecipe = ({ cancelRecipe }) => {
                         introMenu ?
                             (<AddIntroduction recipe={recipe} saveIntro={saveIntro} uploadPhoto={uploadPhoto} />)
                             : ingredientsMenu ?
-                                (<AddIngredients ingredients={ingredients} saveIngredients={saveIngredients}/>)
+                                (<AddIngredients ingredients={ingredients} saveIngredients={saveIngredients} />)
                                 :
                                 ('Steps List!')
                     }

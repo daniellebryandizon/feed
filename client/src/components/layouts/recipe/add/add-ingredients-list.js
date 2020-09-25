@@ -12,43 +12,44 @@ import {
 } from '@material-ui/core';
 
 const AddedIngredientsList = ({ ingredientList }) => {
-
-    console.log(Object.keys(ingredientList).length)
     return (
         <Fragment>
-            <TableContainer>
-                <Table aria-label="simple table">
-                    <TableHead>
-                        <TableRow>
-                            <TableCell>Quantity</TableCell>
-                            <TableCell>Name</TableCell>
-                            <TableCell>Unit</TableCell>
-                            <TableCell>Notes</TableCell>
-                        </TableRow>
-                    </TableHead>
-                    <TableBody>
-                        {
-                            Object.keys(ingredientList).length > 0 ?
-                                ingredientList.map((ingredient) => (
+            {
+                Object.keys(ingredientList).length > 0 ?
+                    (
+                        <TableContainer>
+                            <Table aria-label="simple table">
+                                <TableHead>
                                     <TableRow>
-                                        <TableCell>{ingredient.quantity}</TableCell>
-                                        <TableCell>{ingredient.name}</TableCell>
-                                        <TableCell>{ingredient.unit}</TableCell>
-                                        <TableCell>{ingredient.note}</TableCell>
+                                        <TableCell>Quantity</TableCell>
+                                        <TableCell>Name</TableCell>
+                                        <TableCell>Unit</TableCell>
+                                        <TableCell>Notes</TableCell>
                                     </TableRow>
-                                ))
-                                :
-                                (
-                                    <Box style={{ padding: '20px' }}>
-                                        {`No ingredients added`}
-                                    </Box>
-                                )
-                        }
-                    </TableBody>
-                </Table>
-            </TableContainer >
+                                </TableHead>
+                                {
+                                    ingredientList.map((ingredient) => (
+                                        <TableBody>
+                                            <TableRow>
+                                                <TableCell>{ingredient.quantity}</TableCell>
+                                                <TableCell>{ingredient.name}</TableCell>
+                                                <TableCell>{ingredient.unit}</TableCell>
+                                                <TableCell>{ingredient.note}</TableCell>
+                                            </TableRow>
+                                        </TableBody>
+                                    ))
+                                }
+                            </Table>
+                        </TableContainer >
+                    )
+                    :
+                    (
+                        <Box style={{ padding: '20px' }}>
+                            {`No ingredients added...`}
+                        </Box>
+                    )
+            }
         </Fragment>
-
     )
 }
 
