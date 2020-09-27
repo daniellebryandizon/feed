@@ -20,7 +20,9 @@ const AddRecipe = ({ cancelRecipe }) => {
         cookTime: '',
         prepTime: '',
         ingredients: [],
-        steps: [],
+        steps: [
+            
+        ],
     })
 
     const [menu, setMenu] = useState({
@@ -72,7 +74,7 @@ const AddRecipe = ({ cancelRecipe }) => {
         })
     }
 
-    const saveSteps = (step) => {
+    const saveStep = (step) => {
         setRecipe({
             ...recipe,
             steps: [
@@ -139,7 +141,7 @@ const AddRecipe = ({ cancelRecipe }) => {
                             : ingredientsMenu ?
                                 (<AddIngredients ingredients={ingredients} saveIngredients={saveIngredients} />)
                                 :
-                                (<AddSteps />)
+                                (<AddSteps steps={steps} saveStep={saveStep} />)
                     }
                 </Box>
             </Paper>

@@ -1,5 +1,17 @@
+.add-step-container {
+    margin-top: -20px !important;
+}
+
+.add-single-step-header h6:first-child{
+    padding-bottom: 5px;
+}
+
+.add-step-container h6{
+    font-size: 16px !important;
+}
+
 .add-step-control {
-    margin-top: 10px;
+    margin-top: 20px;
     display: flex;
     align-items: center;
 }
@@ -8,3 +20,57 @@
     padding-left: 10px;
     font-size: 16px !important;
 }
+
+.add-single-step {
+    margin-top: 20px;
+}
+
+
+.add-single-step > form > div:nth-child(n+1) {
+    margin-top: 20px;
+}
+
+.add-step-text-area {
+    margin-top: 15px;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 98px;
+    max-height: 98px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: inherit;
+    border-radius: 5px;
+    background-color: inherit;
+    color: inherit;
+}
+
+.add-single-step-controls {
+    display: flex;
+}
+
+.add-single-step-controls button {
+    text-transform: none;
+    width: 15%;
+    margin-right: 10px;
+}
+
+.add-single-step-controls button:first-child {
+    background-color: #f57c00!important;
+}
+
+.add-single-step-controls button:last-child {
+    background-color: #e0e0e0!important;
+}
+
+.step-item {
+    margin-top: 20px;
+}
+
+.step-item p{
+    padding-top: 10px;
+    padding-left: 25px;
+    font-style: italic;
+    color: #757575 !important;
+}
+
+
