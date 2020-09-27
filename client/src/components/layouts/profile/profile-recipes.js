@@ -29,8 +29,8 @@ const useStyles = makeStyles((theme) => ({
 const ProfileRecipes = () => {
 
     const [recipe, setRecipe] = useState({
-        isHome: false,
-        isAdd: true,
+        isHome: true,
+        isAdd: false,
         isView: false
     })
 
@@ -71,6 +71,48 @@ const ProfileRecipes = () => {
                                     </Tooltip>
                                     <Typography>Add Recipe</Typography>
                                 </Box>
+                                <Card img={steak} title="Steak" />
+                                <Card img={salmon} title="Salmon" />
+                                <Card img={salad} title="Salad" />
+                                <Card img={rice} title="Fried Rice" />
+                                <Card img={scallops} title="Pan-seared scallops with asparagus" />
+                                <Card img={curry} title="Curry" />
+                                <Card img={steak} title="Steak" />
+                                <Card img={salmon} title="Salmon" />
+                                <Card img={salad} title="Salad" />
+                                <Card img={rice} title="Fried Rice" />
+                                <Card img={scallops} title="Pan-seared scallops with asparagus" />
+                                <Card img={curry} title="Curry" />
+                                <Card img={steak} title="Steak" />
+                                <Card img={salmon} title="Salmon" />
+                                <Card img={salad} title="Salad" />
+                                <Card img={rice} title="Fried Rice" />
+                                <Card img={scallops} title="Pan-seared scallops with asparagus" />
+                                <Card img={curry} title="Curry" />
+                                <Card img={steak} title="Steak" />
+                                <Card img={salmon} title="Salmon" />
+                                <Card img={salad} title="Salad" />
+                                <Card img={rice} title="Fried Rice" />
+                                <Card img={scallops} title="Pan-seared scallops with asparagus" />
+                                <Card img={curry} title="Curry" />
+                                <Card img={steak} title="Steak" />
+                                <Card img={salmon} title="Salmon" />
+                                <Card img={salad} title="Salad" />
+                                <Card img={rice} title="Fried Rice" />
+                                <Card img={scallops} title="Pan-seared scallops with asparagus" />
+                                <Card img={curry} title="Curry" />
+                                <Card img={steak} title="Steak" />
+                                <Card img={salmon} title="Salmon" />
+                                <Card img={salad} title="Salad" />
+                                <Card img={rice} title="Fried Rice" />
+                                <Card img={scallops} title="Pan-seared scallops with asparagus" />
+                                <Card img={curry} title="Curry" />
+                                <Card img={steak} title="Steak" />
+                                <Card img={salmon} title="Salmon" />
+                                <Card img={salad} title="Salad" />
+                                <Card img={rice} title="Fried Rice" />
+                                <Card img={scallops} title="Pan-seared scallops with asparagus" />
+                                <Card img={curry} title="Curry" />
                                 <Card img={steak} title="Steak" />
                                 <Card img={salmon} title="Salmon" />
                                 <Card img={salad} title="Salad" />

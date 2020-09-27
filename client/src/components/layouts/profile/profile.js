@@ -15,12 +15,48 @@ import '../../css/components/profile/profile.css';
 const Profile = () => {
 
     const [tab, setTab] = useState({
-        isHome: false,
-        isRecipes: true,
+        isHome: true,
+        isRecipes: false,
         isFollowing: false,
         isAbout: false
     });
 
+    const seeAll = (profileTab) => {
+        console.log(profileTab)
+        switch (profileTab) {
+            case 'recipe':
+                setTab({
+                    isHome: false,
+                    isRecipes: true,
+                    isFollowing: false,
+                    isAbout: false
+                });
+                break;
+            case 'following':
+                setTab({
+                    isHome: false,
+                    isRecipes: false,
+                    isFollowing: true,
+                    isAbout: false
+                });
+                break;
+            case 'about':
+                setTab({
+                    isHome: false,
+                    isRecipes: false,
+                    isFollowing: false,
+                    isAbout: true
+                })
+                break;
+            default:
+                setTab({
+                    isHome: true,
+                    isRecipes: false,
+                    isFollowing: false,
+                    isAbout: false
+                })
+        }
+    }
     const classes = AvatarSizes();
 
     const { isHome, isRecipes, isFollowing, isAbout } = tab;
@@ -128,7 +164,7 @@ const Profile = () => {
                 </Paper>
                 <Box className="profile-body">
                     {
-                        isHome ? (<ProfileHome />) : ''
+                        isHome ? (<ProfileHome seeAll={seeAll} />) : ''
                     }
                     {
                         isRecipes ? (<ProfileRecipes />) : ''
