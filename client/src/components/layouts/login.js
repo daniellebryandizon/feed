@@ -1,4 +1,9 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+
+//FUNCTIONS
+import { login } from '../../actions/login';
 
 //CSS IMPORTS
 import { Button, Typography, Box } from '@material-ui/core';
@@ -6,7 +11,7 @@ import CustomTextField from './helpers/CustomTextField';
 
 import '../css/components/login.css';
 
-const Login = () => {
+const Login = ({ login }) => {
 
     return (
         <Fragment>
@@ -30,7 +35,7 @@ const Login = () => {
                         className="text-field" />
                     <br />
                     <br />
-                    <Button variant="contained" disableElevation className="login-button">
+                    <Button variant="contained" disableElevation className="login-button" onClick={() => login()}>
                         <Typography variant="subtitle2" className="button-text">Login</Typography>
                     </Button>
                 </form>
@@ -39,4 +44,8 @@ const Login = () => {
     )
 }
 
-export default Login
+Login.propTypes = {
+    login: PropTypes.func.isRequired
+}
+
+export default connect(null, {login})(Login);

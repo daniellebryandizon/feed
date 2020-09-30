@@ -1,0 +1,23 @@
+.MuiSnackbar-anchorOriginTopCenter {
+    top: 75px !important;
+}
+
+.MuiAlert-filledInfo, .MuiAlert-filledSuccess, .MuiAlert-filledWarning, .MuiAlert-filledError {
+    background-color: rgb(0,0,0, 0.84) !important;
+}
+
+.MuiAlert-filledInfo > .MuiAlert-icon {
+    color: blue !important;
+}
+
+.MuiAlert-filledSuccess > .MuiAlert-icon {
+    color: green !important;
+}
+
+.MuiAlert-filledWarning > .MuiAlert-icon {
+    color: orange !important;
+}
+
+.MuiAlert-filledError > .MuiAlert-icon {
+    color: red !important;
+}
