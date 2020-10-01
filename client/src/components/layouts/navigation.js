@@ -1,13 +1,19 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+
+//FUNCTION IMPORTS
+import { logout } from '../../actions/login';
 
 //CSS IMPORTS
-import { AppBar, Toolbar, Typography, CssBaseline, useScrollTrigger, Container } from '@material-ui/core';
+import { AppBar, Toolbar, Typography, CssBaseline, useScrollTrigger, Container, Box } from '@material-ui/core';
 import feed_icon from '../css/images/feed_icon.png'
 import '../css/components/navigation.css';
 
 const Navigation = (props) => {
+
+    const { isAuthenticated, logout } = props;
     return (
         <Fragment>
             <CssBaseline />
@@ -15,23 +21,35 @@ const Navigation = (props) => {
                 <AppBar className="application-bar">
                     <Container>
                         <Toolbar>
-                            <Link to="/" className="application-bar-link">
+                            <Link to="/">
                                 <img edge="start" alt="Feed" src={feed_icon} className="application-bar-avatar" />
                             </Link>
                             <Typography className="application-bar-title">
-                                <Link to="/" className="application-bar-link">
+                                <Link to="/">
                                     <span className="logo-accent">|</span> Feed
                                 </Link>
                             </Typography>
-                            <Link to="/" className="application-bar-link">
-                                Login
-                            </Link>
+                            {
+                                isAuthenticated ?
+                                    (
+                                        <Box>
+                                            <Link to="/" className="application-bar-link">
+                                                Home
+                                        </Link>
+                                            <Link onClick={() => logout()} className="application-bar-link">
+                                                Logout
+                                        </Link>
+                                        </Box>
+
+                                    ) :
+                                    ''
+                            }
                         </Toolbar>
                     </Container>
                 </AppBar>
             </ElevationScroll>
             <Toolbar />
-        </Fragment>
+        </Fragment >
     )
 }
 
@@ -59,5 +77,14 @@ ElevationScroll.propTypes = {
     window: PropTypes.func,
 };
 
-export default Navigation;
+Navigation.propTypes = {
+    logout: PropTypes.func.isRequired,
+    isAuthenticated: PropTypes.bool.isRequired
+}
+
+const mapStateToProps = (state) => ({
+    isAuthenticated: state.login.isAuthenticated
+})
+
+export default connect(mapStateToProps, { logout })(Navigation);
 

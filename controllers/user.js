@@ -88,7 +88,7 @@ exports.login = async (req, res) => {
         
         //CHECK IF USER IS EXISTING
         if (!user) {
-            return res.json({
+            return res.status(401).json({
                 message: 'Invalid credentials'
             });
         }
@@ -97,7 +97,7 @@ exports.login = async (req, res) => {
         const decryptPassword = await bcrypt.compare(password, user.password);
 
         if (!decryptPassword) {
-            return res.json({
+            return res.status(401).json({
                 message: 'Invalid credentials'
             })
         }
@@ -120,7 +120,7 @@ exports.login = async (req, res) => {
         )
     } catch (error) {
         console.log(error.message)
-        res.json({
+        res.status(500).json({
             message: 'Server error'
         })
     }
