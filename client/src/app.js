@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 //COMPONENT IMPORTS
+import ProtectedRoute from './components/layouts/routes/ProtectedRoute';
 import Navigation from './components/layouts/navigation';
 import AlertMessage from './components/layouts/alerts/alertMessage';
 import LoginRegister from './components/layouts/loginRegister';
@@ -25,7 +26,7 @@ const App = ({ alertMessage: { showAlert } }) => {
                     {
                         showAlert ? <AlertMessage /> : ''
                     }
-                    <Route exact path="/profile" component={Profile}></Route>
+                    <ProtectedRoute exact path="/profile" component={Profile}></ProtectedRoute>
                     <Route exact path="/" component={LoginRegister} />
                 </Container>
             </Switch>
