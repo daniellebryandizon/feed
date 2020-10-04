@@ -8,7 +8,6 @@ const ProfileSchema = mongoose.Schema({
     profileImage: {
         data: Buffer,
         contentType: String,
-        required: true
     },
     numRecipes: {
         type: Number,

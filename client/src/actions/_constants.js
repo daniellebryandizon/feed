@@ -10,3 +10,7 @@ export const LOGIN = {
     LOGOUT: 'LOGOUT',
     USER_LOADED: 'USER_LOADED'
 }
+
+export const PROFILE = {
+    LOAD_PROFILE: 'LOAD_PROFILE'
+}
