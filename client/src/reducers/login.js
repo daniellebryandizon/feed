@@ -1,9 +1,8 @@
 import { LOGIN } from '../actions/_constants';
 
-const { LOGIN_SUCCESS, LOGIN_FAIL, LOGOUT } = LOGIN;
+const { LOGIN_SUCCESS, LOGIN_FAIL, LOGOUT, USER_LOADED } = LOGIN;
 
 const initialState = {
-    token: null,
     isAuthenticated: false,
     user: null
 };
@@ -14,20 +13,25 @@ export default (state = initialState, action) => {
 
     switch (type) {
         case LOGIN_SUCCESS:
-            localStorage.setItem('token', payload.token);
             return {
                 ...state,
-                token: payload.token,
+                token: payload.accessToken,
                 isAuthenticated: true
             }
 
         case LOGIN_FAIL:
         case LOGOUT:
-            localStorage.removeItem('token');
             return {
-                token: null,
                 isAuthenticated: false,
                 user: null
+            }
+
+        case USER_LOADED:
+            return {
+                ...state,
+                isAuthenticated: true,
+                user: payload
+
             }
         default:
             return state;

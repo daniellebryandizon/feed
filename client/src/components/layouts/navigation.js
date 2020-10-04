@@ -13,7 +13,8 @@ import '../css/components/navigation.css';
 
 const Navigation = (props) => {
 
-    const { isAuthenticated, logout } = props;
+    const { login: { isAuthenticated, user }, logout } = props;
+
     return (
         <Fragment>
             <CssBaseline />
@@ -30,11 +31,11 @@ const Navigation = (props) => {
                                 </Link>
                             </Typography>
                             {
-                                isAuthenticated ?
+                                isAuthenticated && user ?
                                     (
                                         <Box>
-                                            <Link to="/" className="application-bar-link">
-                                                Home
+                                            <Link to={`/profile/${user.username}`} className="application-bar-link">
+                                                Profile
                                         </Link>
                                             <Link onClick={() => logout()} className="application-bar-link">
                                                 Logout
@@ -79,11 +80,11 @@ ElevationScroll.propTypes = {
 
 Navigation.propTypes = {
     logout: PropTypes.func.isRequired,
-    isAuthenticated: PropTypes.bool.isRequired
+    login: PropTypes.object.isRequired
 }
 
 const mapStateToProps = (state) => ({
-    isAuthenticated: state.login.isAuthenticated
+    login: state.login
 })
 
 export default connect(mapStateToProps, { logout })(Navigation);

@@ -2,7 +2,7 @@ const jwtToken = require('jsonwebtoken');
 
 module.exports = (req, res, next) => {
 
-    const token = req.header('auth-token');
+    const token = req.cookies.token;
 
     if (!token) {
         return res.json({
@@ -11,14 +11,17 @@ module.exports = (req, res, next) => {
     }
 
     try {
+
         const decoded = jwtToken.verify(token, process.env.JSONWEBTOKEN);
         req.user = decoded.user;
         next();
+
     } catch (error) {
+
         console.log(error.message);
         res.json({
             message: 'Authorization is invalid'
         })
+        
     }
-
 }

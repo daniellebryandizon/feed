@@ -42,7 +42,6 @@ const Login = ({ login }) => {
             <Box className="login-form">
                 <form onSubmit={onSubmit}>
                     <CustomTextField
-                        id="standard-basic"
                         autoComplete="off"
                         label="Username"
                         type="text"
@@ -53,7 +52,6 @@ const Login = ({ login }) => {
                     <br />
                     <br />
                     <CustomTextField
-                        id="standard-basic"
                         autoComplete="off"
                         label="Password"
                         type="password"

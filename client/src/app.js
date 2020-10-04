@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import store from './store';
 
 //COMPONENT IMPORTS
 import ProtectedRoute from './components/layouts/routes/ProtectedRoute';
@@ -11,6 +12,7 @@ import LoginRegister from './components/layouts/loginRegister';
 import Profile from './components/layouts/profile/profile';
 
 //FUNCTION IMPORTS
+import { loadUser } from './actions/login';
 
 //CSS IMPORTS
 import { Container } from '@material-ui/core';
@@ -18,6 +20,11 @@ import './components/layouts/helpers/CustomTextField.css';
 import './components/css/app.css'
 
 const App = ({ alertMessage: { showAlert } }) => {
+
+    useEffect(() => {
+        store.dispatch(loadUser());
+    }, [])
+
     return (
         <Router>
             <Switch>
@@ -26,7 +33,7 @@ const App = ({ alertMessage: { showAlert } }) => {
                     {
                         showAlert ? <AlertMessage /> : ''
                     }
-                    <ProtectedRoute exact path="/profile" component={Profile}></ProtectedRoute>
+                    <ProtectedRoute exact path="/profile/:username" component={Profile}></ProtectedRoute>
                     <Route exact path="/" component={LoginRegister} />
                 </Container>
             </Switch>

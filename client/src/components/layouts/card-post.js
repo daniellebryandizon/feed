@@ -23,7 +23,7 @@ const CardPost = ({ img }) => {
                     </Box>
                 </Box>
                 <Box className="card-post-body">
-                    <img src={img} />
+                    <img src={img} alt="card-post"/>
                 </Box>
                 <Box className="card-post-mid">
                     <Box className="card-post-like">

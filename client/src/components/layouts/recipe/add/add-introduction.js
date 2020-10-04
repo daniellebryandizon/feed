@@ -57,7 +57,7 @@ const AddIntroduction = (
                     uploadedPhoto === null ? '' :
                         (
                             <Paper className="image-upload-body">
-                                <img src={uploadedPhoto} alt="sample photo" />
+                                <img src={uploadedPhoto} alt="upload-body" />
                             </Paper>
                         )
                 }

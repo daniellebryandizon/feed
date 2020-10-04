@@ -9,7 +9,7 @@ const Card = ({ img, title }) => {
     return (
         <Fragment>
             <Paper elevation={3} className="card-item">
-                <img src={img}></img>
+                <img src={img} alt={title}></img>
                 <Box>
                     <Typography>{title}</Typography>
                 </Box>

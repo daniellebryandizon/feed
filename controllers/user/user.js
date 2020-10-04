@@ -1,11 +1,11 @@
 const jwtoken = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
-const jwtToken = require('jsonwebtoken');
 require('dotenv').config();
 
-const encryptPassword = require('../helpers/encryptPassword');
+const encryptPassword = require('../../helpers/encryptPassword');
+const generateToken = require('../../helpers/generateToken');
 
-const User = require('../model/user');
+const User = require('../../model/user');
 
 exports.getUser = async (req, res) => {
 
@@ -85,7 +85,7 @@ exports.login = async (req, res) => {
 
     try {
         const user = await User.findOne({ username });
-        
+
         //CHECK IF USER IS EXISTING
         if (!user) {
             return res.status(401).json({
@@ -109,19 +109,18 @@ exports.login = async (req, res) => {
             }
         }
 
-        jwtToken.sign(
-            payload,
-            process.env.JSONWEBTOKEN,
-            { expiresIn: 40000 },
-            (error, token) => {
-                if (error) throw error;
-                return res.json({ token })
-            }
-        )
+        const accessToken = generateToken(payload);
+
+        res.cookie('token', accessToken, { httpOnly: true });
+
+        res.json({ accessToken });
+
     } catch (error) {
+
         console.log(error.message)
         res.status(500).json({
             message: 'Server error'
-        })
+        });
+
     }
 }

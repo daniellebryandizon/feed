@@ -2,7 +2,6 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 import Card from '../card';
-import CardPost from '../card-post';
 
 import { Typography, Box, Button } from '@material-ui/core';
 import ColoredPatties from '../../css/images/colored-patties.png';

@@ -6,7 +6,7 @@ import AddIngredients from './add-ingredients';
 import AddSteps from './add-steps';
 
 //CSS IMPORTS
-import { Box, Typography, Button, Paper, Tooltip, Fab } from '@material-ui/core';
+import { Box, Button, Paper } from '@material-ui/core';
 import '../../../css/components/recipe/add/add-recipe.css'
 
 const AddRecipe = ({ cancelRecipe }) => {
@@ -21,7 +21,7 @@ const AddRecipe = ({ cancelRecipe }) => {
         prepTime: '',
         ingredients: [],
         steps: [
-            
+
         ],
     })
 
