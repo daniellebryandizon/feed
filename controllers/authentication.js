@@ -5,7 +5,7 @@ module.exports = (req, res, next) => {
     const token = req.cookies.token;
 
     if (!token) {
-        return res.json({
+        return res.status(401).json({
             message: 'Authorization denied'
         });
     }
@@ -19,7 +19,7 @@ module.exports = (req, res, next) => {
     } catch (error) {
 
         console.log(error.message);
-        res.json({
+        res.status(401).json({
             message: 'Authorization is invalid'
         })
         

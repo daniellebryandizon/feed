@@ -10,6 +10,7 @@ import Navigation from './components/layouts/navigation';
 import AlertMessage from './components/layouts/alerts/alertMessage';
 import LoginRegister from './components/layouts/loginRegister';
 import Profile from './components/layouts/profile/profile';
+import Home from './components/layouts/home/home';
 
 //FUNCTION IMPORTS
 import { loadUser } from './actions/login';
@@ -33,8 +34,9 @@ const App = ({ alertMessage: { showAlert } }) => {
                     {
                         showAlert ? <AlertMessage /> : ''
                     }
-                    <ProtectedRoute exact path="/profile/:username" component={Profile}></ProtectedRoute>
                     <Route exact path="/" component={LoginRegister} />
+                    <ProtectedRoute exact path="/profile/:username" component={Profile} />
+                    <ProtectedRoute exact path="/home" component={Home} />
                 </Container>
             </Switch>
         </Router>

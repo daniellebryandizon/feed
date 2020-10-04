@@ -18,13 +18,13 @@ export const login = ({ username, password }) => async dispatch => {
     try {
 
         const res = await axios.post('/user/login', body, config);
+        console.log(res.data);
+        dispatch(loadUser());
 
         dispatch({
             type: LOGIN_SUCCESS,
             payload: res.data
         });
-
-        dispatch(loadUser());
 
     } catch (error) {
 
@@ -41,17 +41,38 @@ export const login = ({ username, password }) => async dispatch => {
 
 export const loadUser = () => async dispatch => {
 
-    const res = await axios.get('/user');
+    try {
+        const res = await axios.get('/user');
 
-    dispatch({
-        type: USER_LOADED,
-        payload: res.data
-    })
+        dispatch({
+            type: USER_LOADED,
+            payload: res.data
+        });
+
+    } catch (error) {
+        dispatch({
+            type: LOGIN_FAIL
+        });
+    }
+
 }
 
 export const logout = () => async dispatch => {
-    console.log('hello')
-    dispatch({
-        type: LOGOUT
-    })
+
+    try {
+
+        await axios.get('/user/logout');
+
+        dispatch({
+            type: LOGOUT
+        })
+
+    } catch (error) {
+
+        console.log(error);
+        dispatch({
+            type: LOGOUT
+        })
+        
+    }
 }

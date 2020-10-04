@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from 'react';
+import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
@@ -11,7 +12,7 @@ import CustomTextField from './helpers/CustomTextField';
 
 import '../css/components/login.css';
 
-const Login = ({ login }) => {
+const Login = ({ login, isAuthenticated }) => {
 
     const [credentials, setCredentials] = useState({
         username: '',
@@ -35,6 +36,13 @@ const Login = ({ login }) => {
         event.preventDefault();
 
         login({ username, password });
+    }
+
+    if (isAuthenticated) {
+        return (
+            <Redirect to="/home" />
+        )
+
     }
 
     return (
@@ -71,7 +79,12 @@ const Login = ({ login }) => {
 }
 
 Login.propTypes = {
-    login: PropTypes.func.isRequired
+    login: PropTypes.func.isRequired,
+    isAuthenticated: PropTypes.bool.isRequired
 }
 
-export default connect(null, { login })(Login);
+const mapStateToProps = (state) => ({
+    isAuthenticated: state.login.isAuthenticated
+})
+
+export default connect(mapStateToProps, { login })(Login);

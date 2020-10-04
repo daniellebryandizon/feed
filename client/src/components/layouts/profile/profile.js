@@ -1,4 +1,6 @@
 import React, { Fragment, useState } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 import ProfileHome from './profile-home';
 import ProfileRecipes from './profile-recipes';
@@ -12,7 +14,7 @@ import AvatarPlaceholder from '../../css/images/squidward.jpg'
 
 import '../../css/components/profile/profile.css';
 
-const Profile = () => {
+const Profile = ({ user: { name } }) => {
 
     const [tab, setTab] = useState({
         isHome: true,
@@ -70,7 +72,7 @@ const Profile = () => {
                     </Box>
                     <Box className="profile-info">
                         <Box className="profile-info-name">
-                            <Typography variant="h6">Squidward Tentacles</Typography>
+                            <Typography variant="h6">{name}</Typography>
                         </Box>
                         <Box className="profile-info-lifestyle">
                             <Box>
@@ -181,4 +183,12 @@ const Profile = () => {
     )
 }
 
-export default Profile;
+Profile.propTypes = {
+    user: PropTypes.object.isRequired
+}
+
+const mapStateToProps = (state) => ({
+    user: state.login.user
+});
+
+export default connect(mapStateToProps, {})(Profile);

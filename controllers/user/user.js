@@ -12,6 +12,7 @@ exports.getUser = async (req, res) => {
     const user = await User.findById(req.user.id).select('-password');
 
     res.json(user);
+
 }
 
 exports.register = async (req, res) => {
@@ -57,19 +58,11 @@ exports.register = async (req, res) => {
             }
         }
 
-        jwtoken.sign(
-            payload,
-            process.env.JSONWEBTOKEN,
-            { expiresIn: 40000 },
-            (error, token) => {
-                if (error) {
-                    throw error
-                }
+        const accessToken = generateToken(payload);
 
-                res.json({ token })
+        res.cookie('token', accessToken, { httpOnly: true });
 
-            }
-        )
+        res.send('Successful registration!');
 
     } catch (error) {
         console.log(error.message);
@@ -113,7 +106,7 @@ exports.login = async (req, res) => {
 
         res.cookie('token', accessToken, { httpOnly: true });
 
-        res.json({ accessToken });
+        res.send('Successful login!');
 
     } catch (error) {
 
@@ -123,4 +116,25 @@ exports.login = async (req, res) => {
         });
 
     }
+}
+
+exports.logout = async (req, res) => {
+
+    try {
+
+        res.clearCookie('token');
+
+        res.send('Successful logout!');
+
+    } catch (error) {
+
+        console.log(error.message);
+        
+        res.status(500).json({
+            message: 'Server error'
+        });
+
+    }
+
+
 }

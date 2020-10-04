@@ -35,8 +35,8 @@ const Navigation = (props) => {
                                     (
                                         <Box>
                                             <Link to={`/profile/${user.username}`} className="application-bar-link">
-                                                Profile
-                                        </Link>
+                                                {user.name ? user.name.split(' ')[0] : 'Profile'}
+                                            </Link>
                                             <Link onClick={() => logout()} className="application-bar-link">
                                                 Logout
                                         </Link>
