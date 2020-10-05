@@ -3,11 +3,12 @@ const Profile = require('../../model/profile');
 
 exports.loadProfile = async (req, res) => {
     try {
-        const user = User.findOne(request.params.username);
+        const user = await User.findOne({ username: req.params.username }).select('_id')
 
-        const profile = Profile.find(user.id);
+        const profile = await Profile.findOne({ user: user._id });
 
-        res.json({ profile });
+        res.json(profile);
+
     } catch (error) {
 
         console.log(error);
@@ -37,6 +38,7 @@ exports.createProfile = async (req, res) => {
         await profile.save();
 
         res.json(profile);
+
     } catch (error) {
         console.log(error.message);
 

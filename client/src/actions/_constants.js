@@ -12,5 +12,7 @@ export const LOGIN = {
 }
 
 export const PROFILE = {
-    LOAD_PROFILE: 'LOAD_PROFILE'
+    LOAD_PROFILE: 'LOAD_PROFILE',
 }
+
+export const NOT_FOUND = 'NOT_FOUND'

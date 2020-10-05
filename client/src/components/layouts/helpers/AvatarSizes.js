@@ -17,7 +17,7 @@ const AvatarSize = makeStyles((theme) => ({
         width: theme.spacing(23),
         height: theme.spacing(23),
     },
-    profile: {
+    profilePic: {
         width: theme.spacing(23),
         height: theme.spacing(23),
     }

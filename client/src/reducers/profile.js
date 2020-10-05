@@ -16,12 +16,13 @@ export default (state = initialState, action) => {
 
     switch (type) {
         case LOAD_PROFILE:
+            console.log(payload)
             return {
                 ...state,
                 profileImage: payload.profileImage,
-                numOfRecipes: payload.numOfRecipes,
-                numOfFollowers: payload.numOfFollowers,
-                numOfLikes: payload.numOfLikes,
+                numOfRecipes: payload.numRecipes,
+                numOfFollowers: payload.numFollowers,
+                numOfLikes: payload.numLikes,
                 tags: payload.tags
             }
         default:
