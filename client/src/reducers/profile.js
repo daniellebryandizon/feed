@@ -3,6 +3,7 @@ import { PROFILE } from '../actions/_constants';
 const { LOAD_PROFILE } = PROFILE;
 
 const initialState = {
+    user: null,
     profileImage: null,
     numOfRecipes: 0,
     numOfFollowers: 0,
@@ -19,6 +20,7 @@ export default (state = initialState, action) => {
             console.log(payload)
             return {
                 ...state,
+                user: payload.user,
                 profileImage: payload.profileImage,
                 numOfRecipes: payload.numRecipes,
                 numOfFollowers: payload.numFollowers,

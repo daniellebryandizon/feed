@@ -7,6 +7,7 @@ import ProfileHome from './profile-home';
 import ProfileRecipes from './profile-recipes';
 import ProfileFollowing from './profile-following';
 import ProfileAbout from './profile-about';
+import EditProfile from './edit-profile';
 
 //FUNCTION IMPORTS
 import { loadProfile } from '../../../actions/profile';
@@ -18,7 +19,7 @@ import AvatarPlaceholder from '../../css/images/squidward.jpg';
 
 import '../../css/components/profile/profile.css';
 
-const Profile = ({ profile, user: { name, username }, loadProfile }) => {
+const Profile = ({ user: { _id, name, username }, loadProfile, profile }) => {
 
     useEffect(() => {
         loadProfile({ username });
@@ -30,6 +31,8 @@ const Profile = ({ profile, user: { name, username }, loadProfile }) => {
         isFollowing: false,
         isAbout: false
     });
+
+    const [editProfile, setEditProfile] = useState(false);
 
     const seeAll = (profileTab) => {
         console.log(profileTab)
@@ -123,7 +126,12 @@ const Profile = ({ profile, user: { name, username }, loadProfile }) => {
                                         </Box>
                                     </Box>
                                     <Box className="profile-follow">
-                                        <Button className="profile-follow-button">Follow</Button>
+                                        {
+                                            _id === profile.user ?
+                                                (<Button className="profile-follow-button" onClick={() => { setEditProfile(true) }}>Edit Profile</Button>)
+                                                :
+                                                (<Button className="profile-follow-button">Follow</Button>)
+                                        }
                                     </Box>
                                     <Box className="profile-menu">
                                         <Box>
@@ -189,6 +197,7 @@ const Profile = ({ profile, user: { name, username }, loadProfile }) => {
                                     isAbout ? (<ProfileAbout />) : ''
                                 }
                             </Box>
+                            <EditProfile open={editProfile} onClose={() => { setEditProfile(false) }} />
                         </Box>
                     ) : ''
             }
